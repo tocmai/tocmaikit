@@ -1,9 +1,19 @@
+<?php 
+	
+	$isPanelUser = $kirby->user() && 
+		$kirby->user()->role()->permissions()->for('access', 'panel'); 
+
+	if($site->maintenance()->toBool()) { 
+		snippet('layouts/maintenance'); 
+		exit();
+	} 
+?>
 <!doctype html>
 <html lang="<?= $kirby->language()->code() ?>">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 	<link rel="icon" sizes="32x32" href="/favicon.png">
 	<link rel="icon" type="image/svg+xml" href="/assets/svg/favicon.svg">
 	<style type='text/css'>
@@ -21,12 +31,8 @@
 	<?= $slots->styles() ?>
 </head>
 
-<?php 
-	$isPanelUser = $kirby->user() && 
-		$kirby->user()->role()->permissions()->for('access', 'panel'); 
-?>
-
 <body>
+	<a id='skip-to-content' href='#main'><?= t('theme.skiptocontent') ?></a>
 	<header>
 		<nav>
 			<a href='<?= $site->url() ?>'>
@@ -40,7 +46,7 @@
 			?>
 		</nav>
 	</header>
-	<main>
+	<main id='main' tabindex='-1'>
 		<?= $slots->content() ?>
 	</main>
 	<?= $slots->scripts() ?>

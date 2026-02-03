@@ -24,3 +24,10 @@ tabs:
   options:
     label: Options
     sections:
+      options_fields:
+        type: fields
+        fields:
+          maintenance:
+            label: Maintenance mode
+            type: toggle
+            default: false
