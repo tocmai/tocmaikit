@@ -57,7 +57,7 @@
 	<?php if ($isPanelUser): ?>
 	<div class='kirby-admin-bar'>
 		<details>
-			<summary>Raw fields</summary>
+			<summary><?= t('theme.admin.rawfields') ?></summary>
 			<table>
 			<tbody>
 			<?php foreach ($page->content()->fields() as $key => $value): ?>
@@ -71,11 +71,19 @@
 		</details>
 		<ul role=list>
 			<?php if($isPanelUser): ?>
-			<li><a href='<?= $page->panel()->url() ?>'>Edit page</a></li>
-			<li><a href='<?= $site->panel()->url() ?>'>Panel</a></li>
+			<li>
+				<a href='<?= $page->panel()->url() ?>'>
+					<?= t('theme.admin.editpage') ?>
+				</a>
+			</li>
+			<li>
+				<a href='<?= $site->panel()->url() ?>'>
+					<?= t('theme.admin.panel') ?>
+				</a>
+			</li>
 			<?php endif ?>
 			<li>
-				<a href='/panel/logout'>Log out</a>
+				<a href='/panel/logout'><?= t('theme.admin.logout') ?></a>
 			</li>
 		</ul>
 	</div>

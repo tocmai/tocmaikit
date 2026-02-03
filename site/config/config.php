@@ -2,5 +2,6 @@
 
 return [
 	'languages' => true,
-	'debug' => false
+	'debug' => false,
+	'date.handler'  => 'intl'
 ];

@@ -9,3 +9,4 @@ A minimal Kirby CMS starter with a folder structure inspired by [ComposerKit](ht
 * Basic admin bar.
 * Translations managed from a plugin (as to not expose them to panel users).
 * Global navigation menus.
+* Helper functions for localized date/time.
