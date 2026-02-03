@@ -1,0 +1,29 @@
+{
+  "name": "tocmai/tocmaikit",
+  "description": "Kirby TocmaiKit",
+  "type": "project",
+  "support": {
+    "source": "https://github.com/tocmai/tocmaikit"
+  },
+  "require": {
+    "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+    "ext-intl": "*",
+    "getkirby/cms": "^5.2",
+    "medienbaecker/kirby-help-view": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    },
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "kirby-cms-path": false
+  },
+  "scripts": {
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php -S localhost:8000 -t public vendor/getkirby/cms/router.php"
+    ]
+  }
+}

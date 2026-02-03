@@ -1,0 +1,14 @@
+# See: https://getkirby.com/docs/cookbook/navigation/menu-builder
+
+type: group
+fields:
+  link:
+    label: Link
+    type: link
+    options:
+      - page
+      - url
+  title:
+    label: Title
+    type: text
+    help: Required for URLs

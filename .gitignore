@@ -1,0 +1,24 @@
+# Temporary files
+
+/public/media/*
+!/public/media/.gitkeep
+
+# Composer dependencies
+
+/vendor
+
+# Accounts
+
+/storage/accounts/*
+!/storage/accounts/.gitkeep
+
+# License
+
+/storage/.license
+
+# Runtime Files
+
+/runtime/*
+!/runtime/cache/.gitkeep
+!/runtime/logs/.gitkeep
+!/runtime/sessions/.gitkeep

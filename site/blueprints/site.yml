@@ -1,0 +1,26 @@
+title: Site
+tabs:
+  content:
+    label: Content
+    sections:
+      pages:
+        type: pages
+  navigation:
+    label: Navigation
+    sections:
+      navigation_fields:
+        type: fields
+        fields:
+          mainmenu:
+            label: Main Menu
+            type: structure
+            fields: 
+              menufields: fields/menufields
+          socialmenu:
+            label: Social Menu
+            type: structure
+            fields: 
+              menufields: fields/menufields
+  options:
+    label: Options
+    sections:

@@ -1,0 +1,7 @@
+{
+	"name": "tocmai/tocmaikit",
+	"private": true,
+	"scripts": {
+		"start": "composer run start"
+	}
+}
