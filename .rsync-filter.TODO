@@ -1,0 +1,10 @@
+# TODO: fix the rsync filtering rules
+
+- .DS_Store
+- /*.*
+- /node_modules/
+- /content/
+- /storage/
+- /public/media/
+- /site/config/.license
+- /tools/

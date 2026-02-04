@@ -1,0 +1,50 @@
+# rclone filtering rules
+# See: https://rclone.org/filtering/
+
+# Skip useless files
+# ------------------
+- .DS_Store
+
+# Vendor
+# ------
+# Copy everything except dotfiles
+
+- /vendor/**/.*
+- /vendor/.*
++ /vendor/**
+
+# Public folder
+# -------------
+# Ignore media folder 
+
++ /public/media/.gitkeep
+- /public/media/**
++ /public/**
+
+# Site folder
+# -----------
+
+# Exclude plugins' `_src` files
+- /site/plugins/*/_src/**
+- /site/plugins/*/package.json
+
+# Placeholder folders
++ /site/**/.gitkeep
+
+# Exclude dotfiles
+- /site/.*
+- /site/**/.*
+
+# Include everything else
++ /site/**
+
+# Storage and runtime folders
+# ---------------------------
++ /runtime/**/.gitkeep
++ /storage/**/.gitkeep
+
+# ------------- DO NOT REMOVE ------------------
+# Exclude everything not specifically mentioned!
+# ------------- DO NOT REMOVE ------------------
+
+- **
