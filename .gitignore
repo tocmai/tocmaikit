@@ -6,6 +6,7 @@
 # Composer dependencies
 
 /vendor
+/site/plugins/kirby-help-view
 
 # Accounts
 
