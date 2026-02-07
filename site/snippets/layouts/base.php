@@ -44,6 +44,8 @@
 					[ 'items' => $site->mainmenu()->toStructure() ]
 				); 
 			?>
+
+			<?php snippet('components/language-switcher'); ?>
 		</nav>
 	</header>
 	<main id='main' tabindex='-1'>
