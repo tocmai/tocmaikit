@@ -14,9 +14,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?= $page->title() ?> · <?= $site->title() ?></title>
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-	<link rel="icon" sizes="32x32" href="/favicon.png">
-	<link rel="icon" type="image/svg+xml" href="/assets/svg/favicon.svg">
+	<link rel="stylesheet" type="text/css" href="<?= url('assets/css/style.css') ?>">
+	<link rel="icon" sizes="32x32" href="<?= url('favicon.png') ?>">
+	<link rel="icon" type="image/svg+xml" href="<?= url('assets/svg/favicon.svg') ?>">
 	<style type='text/css'>
 		@media (prefers-reduced-motion: no-preference) {
 			@view-transition {
@@ -92,7 +92,9 @@
 			</li>
 			<?php endif ?>
 			<li>
-				<a href='/panel/logout'><?= t('theme.admin.logout') ?></a>
+				<a href='<?= url('panel/logout') ?>'>
+					<?= t('theme.admin.logout') ?>
+				</a>
 			</li>
 		</ul>
 	</div>
