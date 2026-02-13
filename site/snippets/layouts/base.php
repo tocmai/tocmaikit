@@ -64,9 +64,45 @@
 	</footer>
 
 	<?php if ($isPanelUser): ?>
+	<?php $user_language = $kirby->user()->language(); ?>
 	<div class='kirby-admin-bar'>
+		<ul role=list>
+			<li>
+				<a href='<?= $page->panel()->url() ?>'>
+					<?= t(
+						'theme.admin.editpage', 
+						'theme.admin.editpage',
+						$user_language 
+					) ?>
+				</a>
+			</li>
+			<li>
+				<a href='<?= $site->panel()->url() ?>'>
+					<?= t(
+						'theme.admin.panel',
+						'theme.admin.panel',
+						$user_language 
+					) ?>
+				</a>
+			</li>
+			<li>
+				<a href='<?= url('panel/logout') ?>'>
+					<?= t(
+						'theme.admin.logout',
+						'theme.admin.logout',
+						$user_language 
+					) ?>
+				</a>
+			</li>
+		</ul>
 		<details>
-			<summary><?= t('theme.admin.rawfields') ?></summary>
+			<summary>
+				<?= t(
+					'theme.admin.rawfields',
+					'theme.admin.rawfields',
+					$user_language
+				) ?>	
+			</summary>
 			<table>
 			<tbody>
 			<?php foreach ($page->content()->fields() as $key => $value): ?>
@@ -78,25 +114,6 @@
 			</tbody>
 			</table>
 		</details>
-		<ul role=list>
-			<?php if($isPanelUser): ?>
-			<li>
-				<a href='<?= $page->panel()->url() ?>'>
-					<?= t('theme.admin.editpage') ?>
-				</a>
-			</li>
-			<li>
-				<a href='<?= $site->panel()->url() ?>'>
-					<?= t('theme.admin.panel') ?>
-				</a>
-			</li>
-			<?php endif ?>
-			<li>
-				<a href='<?= url('panel/logout') ?>'>
-					<?= t('theme.admin.logout') ?>
-				</a>
-			</li>
-		</ul>
 	</div>
 	<?php endif ?>
 </body>
