@@ -1,0 +1,5 @@
+title: Administrator
+fields:
+  # A placeholder field to hide the default Kirby info message.
+  line:
+    type: line
