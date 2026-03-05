@@ -64,11 +64,14 @@
 	</footer>
 
 	<?php if ($isPanelUser): ?>
-	<?php $user_language = $kirby->user()->language(); ?>
+	<?php 
+		$user_language = $kirby->user()->language(); 
+		$page_language = $kirby->language()->code();
+	?>
 	<div class='kirby-admin-bar'>
 		<ul role=list>
 			<li>
-				<a href='<?= $page->panel()->url() ?>'>
+				<a href='<?= $page->panel()->url() ?>?language=<?= $page_language ?>'>
 					<?= t(
 						'theme.admin.editpage', 
 						'theme.admin.editpage',
@@ -77,7 +80,7 @@
 				</a>
 			</li>
 			<li>
-				<a href='<?= $site->panel()->url() ?>'>
+				<a href='<?= $site->panel()->url() ?>?language=<?= $page_language ?>'>
 					<?= t(
 						'theme.admin.panel',
 						'theme.admin.panel',
